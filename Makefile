@@ -9,6 +9,6 @@ PROJECT_NAME := lvgl-demo
 EXTRA_COMPONENT_DIRS := components/lvgl_esp32_drivers/lvgl_tft components/lvgl_esp32_drivers/lvgl_touch
 # Must be before include $(IDF_PATH)/make/project.mk
 # $(PROJECT_PATH)/xxx didn't work -> use $(abspath xxx) instead
-
+CFLAGS:=-DLV_CONFIG_INCLUDE_SIMPLE
 include $(IDF_PATH)/make/project.mk
 
